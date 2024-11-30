@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="flutter"
+                 name="Flutter"
+                 start-page="main.topic">
+
+    <toc-element topic="main.topic"/>
+    <toc-element topic="dart.md">
+        <toc-element topic="basic.md">
+            <toc-element topic="variables.md"/>
+            <toc-element topic="operators.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="flutter.md"/>
+</instance-profile>
