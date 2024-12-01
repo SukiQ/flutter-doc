@@ -66,7 +66,7 @@ print(fooList?[1].hashCode)
 
 
 
-## `*expr1* ?? *expr2*`
+## expr1 ?? expr2
 
 如果 `expr1` 为非 null，则返回其值; 否则，计算并返回 `expr2` 的值
 
@@ -76,9 +76,9 @@ String playerName(String? name) => name ?? 'Guest';
 
 
 
-## 级联表达式
+## ..
 
-允许你在同一个对象上连续使用操作符，除了方法调用之外，你还可以获取同一个对象上的成员变量。这样做通常省去了创建临时变量的步骤，同时允许你写出更流畅的代码
+级联表达式允许你在同一个对象上连续使用操作符，除了方法调用之外，你还可以获取同一个对象上的成员变量。这样做通常省去了创建临时变量的步骤，同时允许你写出更流畅的代码
 
 ```dart
 var paint = Paint()
@@ -94,7 +94,9 @@ paint.strokeWidth = 5.0;
 
 
 
-## 空短路级联
+## ?..
+
+空短路级联，允许级联表达式操作的对象为空
 
 ```dart
 querySelector('#confirm') // Get an object.
