@@ -94,7 +94,7 @@ Map<String, String> map = []
 | updateAll()     | 对所有的Key对应的value做出修改                           | `map.updateAll((key, value) => value * 2)`          |
 | removeWhere()   | 移除所有满足条件的元素                                   | `map13.removeWhere((key, value) => value > 3)`      |
 | putIfAbsent()   | 存在key则返回value，查不到则返回值，不修改Map            | `map22.putIfAbsent('a22', () => 2)`                 |
-| addAll()        | 将两个Map合并                                            | `map18.addAll({'a18':1,'b18':7,'a19':2})`           |
+| addAll()        | 将指定Map合并到当前Map                                   | `map18.addAll({'a18':1,'b18':7,'a19':2})`           |
 | remove()        | 移除列指定元素                                           | `map.remove(2)`                                     |
 | clear()         | 清空Map                                                  | `map.clear()`                                       |
 | forEach()       | 遍历Map                                                  | `map.forEach((key, value) => print("$key $value"))` |
@@ -119,20 +119,22 @@ Set<> set = {}
 
 - 函数
 
-| 函数名          | 函数描述                                                 | 样例                                                |
-| --------------- | -------------------------------------------------------- | --------------------------------------------------- |
-| cast()          | 泛型提升为其父祖类                                       | `mapWithStringKeys.cast<Object,Object>()`           |
-| containsValue() | 是否包含某个value                                        | `moonCount.containsValue(3)`                        |
-| containsKey()   | 是否包含某个key                                          | `moonCount.containsKey('Uranus')`                   |
-| []              | 返回给定key的值，如果key不在Map中，则为null              | `map['sec']`                                        |
-| []=             | 将key与给定的value关联，如果已存在，则更新               | `map['sec']=2`                                      |
-| map()           | 将Map转换成其他泛型的Map                                 | `map.map((key, value) => MapEntry(value, key))`     |
-| addEntries()    | 两个Map合并，类型需要一致 ，且如果key相同，则会覆盖value | `map20.addEntries(map21.entries)`                   |
-| update()        | 根据指定的Key对应的value做出修改                         | `map10.update('b10', (value) => value * 2)`         |
-| updateAll()     | 对所有的Key对应的value做出修改                           | `map.updateAll((key, value) => value * 2)`          |
-| removeWhere()   | 移除所有满足条件的元素                                   | `map13.removeWhere((key, value) => value > 3)`      |
-| putIfAbsent()   | 存在key则返回value，查不到则返回值，不修改Map            | `map22.putIfAbsent('a22', () => 2)`                 |
-| addAll()        | 将两个Map合并                                            | `map18.addAll({'a18':1,'b18':7,'a19':2})`           |
-| remove()        | 移除列指定元素                                           | `map.remove(2)`                                     |
-| forEach()       | 遍历Map                                                  | `map.forEach((key, value) => print("$key $value"))` |
+| 函数名         | 函数描述                                                     | 样例                                                         |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| cast()         | 转换为对应的类型                                             | `setOfStrings.cast<int>()`                                   |
+| contains()     | 是否包含某个元素                                             | `characters.contains('B')`                                   |
+| add()          | 添加元素                                                     | `dateTimes.add(time1)`                                       |
+| addAll()       | 添加元素集合                                                 | `characters.addAll({'A', 'B', 'C'})`                         |
+| remove()       | 移除列指定元素                                               | `characters.remove('B')`                                     |
+| lookup()       | 从Set中查找元素，有则返回，无则返回null                      | `colorsA.lookup('red')`                                      |
+| removeAll()    | 移除多个元素                                                 | `colors.removeAll(['cyan', 'purple'])`                       |
+| retainAll()    | 在Set中保留集合中的所有元素，不包含在集合中的元素将从Set中移除 | `colorsA.retainAll(['red', 'blue'])`                         |
+| removeWhere()  | 移除所有满足条件的元素                                       | `characters.removeWhere((element) => element.startsWith('B'))` |
+| retainWhere()  | 移除所有不满足条件的元素                                     | `characters.retainWhere((element) => element.startsWith('B')` |
+| containsAll()  | 判断是否包含所有指定的元素                                   | `characters.containsAll({'A', 'D'})`                         |
+| intersection() | 提取两个Set交集元素创建新的Set                               | `characters1.intersection(characters2)`                      |
+| union()        | 提取两个Set并集元素创建新的Set                               | `colorsA.union(colorsB)`                                     |
+| difference()   | 提取Set与指定Set的差集元素创建新的Set                        | `characters1.difference(characters2)`                        |
+| clear()        | 清空Set                                                      | `characters.clear()`                                         |
+| toSet()        | 以Set为模板创建新的Set                                       | `characters.toSet()`                                         |
 
