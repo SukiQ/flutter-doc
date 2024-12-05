@@ -15,7 +15,7 @@ env:
   DOCKER_VERSION: '243.21565'
   ALGOLIA_APP_NAME: 'flutter'
   ALGOLIA_INDEX_NAME: 'flutter'
-  CONFIG_JSON_PRODUCT: 'flutter'
+  CONFIG_JSON_PRODUCT: 'flutter-doc'
   CONFIG_JSON_VERSION: 'main'
 
 jobs:
