@@ -134,6 +134,5 @@ Set<> set = {}
 | putIfAbsent()   | 存在key则返回value，查不到则返回值，不修改Map            | `map22.putIfAbsent('a22', () => 2)`                 |
 | addAll()        | 将两个Map合并                                            | `map18.addAll({'a18':1,'b18':7,'a19':2})`           |
 | remove()        | 移除列指定元素                                           | `map.remove(2)`                                     |
-| clear()         | 清空Map                                                  | `map.clear()`                                       |
 | forEach()       | 遍历Map                                                  | `map.forEach((key, value) => print("$key $value"))` |
 
