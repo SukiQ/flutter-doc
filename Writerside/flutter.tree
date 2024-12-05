@@ -20,6 +20,13 @@
             <toc-element topic="records.md"/>
             <toc-element topic="collections.md"/>
         </toc-element>
+        <toc-element topic="patterns.md">
+            <toc-element topic="anonymous.md"/>
+            <toc-element topic="optional.md"/>
+            <toc-element topic="named.md"/>
+            <toc-element topic="closures.md"/>
+            <toc-element topic="recursion.md"/>
+        </toc-element>
 
     </toc-element>
     <toc-element topic="flutter.md"/>
