@@ -6,13 +6,16 @@
     <!--        <social type="email" href="weijun.wang@zznode.com">Call author</social>-->
     <!--    </footer>-->
     <variables>
+        <algolia-id>6LK5RYGJ3W</algolia-id>
+        <algolia-index>flutter</algolia-index>
+        <algolia-api-key>96ddf6921d04d65365e6cfcfae3aacb2</algolia-api-key>
         <primary-color>#39AECF</primary-color>
         <header-logo>Flutter.png</header-logo>
         <custom-favicons>Flutter.png</custom-favicons>
     </variables>
     <build-profile instance="flutter">
         <variables>
-            <noindex-content>true</noindex-content>
+            <noindex-content>false</noindex-content>
             <color-preset>soft</color-preset>
             <content-max-width>1400</content-max-width>
             <link-color>#39AECF</link-color>
