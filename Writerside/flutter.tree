@@ -3,8 +3,8 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="flutter"
-                 name="Flutter"
-                 start-page="main.topic">
+                  name="Flutter"
+                  start-page="main.topic">
 
     <toc-element topic="main.topic"/>
     <toc-element topic="dart.md">
@@ -20,9 +20,8 @@
             <toc-element topic="records.md"/>
             <toc-element topic="collections.md"/>
         </toc-element>
-        <toc-element topic="patterns.md">
-        </toc-element>
-
+        <toc-element topic="patterns.md"/>
+        <toc-element topic="functions.md"/>
     </toc-element>
     <toc-element topic="flutter.md"/>
 </instance-profile>
