@@ -22,6 +22,9 @@
         </toc-element>
         <toc-element topic="patterns.md"/>
         <toc-element topic="functions.md"/>
+        <toc-element topic="flow.md">
+            <toc-element topic="loops.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="flutter.md"/>
 </instance-profile>
