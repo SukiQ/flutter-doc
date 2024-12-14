@@ -30,9 +30,9 @@ if (pair case [int x, int y]) {
 
 
 
-## switch 
+## switch {id="switch_2"}
 
-### switch语句
+### switch语句 {id="switch_1"}
 
 `switch`语句后面可以有多个`case`子句，每一个`case`子句都可以是一个`patterns`，当没有`case`子句匹配时，就会执行`default`子句或者`_`通配符子句
 
