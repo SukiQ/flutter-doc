@@ -29,6 +29,9 @@
         </toc-element>
         <toc-element topic="classes.md">
             <toc-element topic="constructors.md"/>
+            <toc-element topic="methods.md"/>
+            <toc-element topic="extends.md"/>
+            <toc-element topic="mixins.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="flutter.md"/>
