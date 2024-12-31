@@ -12,7 +12,7 @@
 
 
 
-## 使用mixin
+## 使用mixin {id="mixin_1"}
 
 要使用混入，请使用`with`关键字，后跟一个或多个混入类名称
 
@@ -31,7 +31,7 @@ class Maestro extends Person with Musical, Aggressive, Demented {
 
 
 
-## 定义mixin
+## 定义mixin {id="mixin_2"}
 
 要定义 mixin，请使用`mixin`关键字
 
