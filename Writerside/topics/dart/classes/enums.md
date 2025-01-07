@@ -13,8 +13,8 @@ enum Color { red, green, blue }
 ## 增强枚举
 
 - 实例变量必须是`final`
-- 所有[生成构造函数](constructors.md##生成构造函数)都必须是常量
-- [工厂构造函数](constructors.md##工厂构造函数)只能返回固定的枚举实例之一
+- 所有[生成构造函数](constructors.md#生成构造函数)都必须是常量
+- [工厂构造函数](constructors.md#工厂构造函数)只能返回固定的枚举实例之一
 - 枚举不能继承
 - 枚举不能覆盖`index`，`hashCode`，`==`
 - 不能声明名为`values`的成员
