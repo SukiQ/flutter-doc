@@ -33,6 +33,7 @@
             <toc-element topic="extends.md"/>
             <toc-element topic="mixins.md"/>
             <toc-element topic="enums.md"/>
+            <toc-element topic="extension.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="flutter.md"/>
