@@ -63,5 +63,14 @@ late int k;
 k=9;
 ```
 
+- 强制不为空
+
+```dart
+String? str="this is str";
+
+str=null;
+
+print(str!.length); 
+```
 
 

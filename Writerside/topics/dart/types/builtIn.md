@@ -31,11 +31,26 @@ var s2 = "Double quotes work just as well.";
 ```
 
 
-
-## bool
-
-Dart有一个名为 `bool` 的类型，只有两个对象具有 bool 类型：`true`和`false`，它们都是编译时常量
+## String -> int
 
 ```dart
-bool boolean = true;
+int one = int.parse('1');
+```
+
+## String -> double
+
+```dart
+double onePointOne = double.parse('1.1');
+```
+
+## int -> String
+
+```dart
+String oneAsString = 1.toString();
+```
+
+## double -> String
+
+```dart
+String oneAsString = 1.1.toString();
 ```
