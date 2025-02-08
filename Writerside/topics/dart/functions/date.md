@@ -53,7 +53,7 @@ DateTime fromTimestamp = DateTime.fromMillisecondsSinceEpoch(timestamp);
 
 
 
-## **获取时间信息**
+## 获取时间信息
 
 ```dart
 DateTime now = DateTime.now();
@@ -68,7 +68,7 @@ print(now.weekday); // 星期（1=周一，7=周日）
 
 
 
-##  **时间计算**
+##  时间计算
 
 - 加减时间
 
@@ -131,7 +131,7 @@ print(parsed);
 
 
 
-## **时区处理**
+## 时区处理
 
 Dart `DateTime` 默认是 **本地时间**，但可以用 `toUtc()` 和 `toLocal()` 处理时区：
 
