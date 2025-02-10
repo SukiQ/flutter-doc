@@ -98,8 +98,7 @@ print(difference.inDays); // 31天
 Dart 原生不提供格式化方法，可以使用 `intl` 库：
 
 ```yaml
-dependencies:
-  intl: ^0.18.0
+intl: ^0.18.0
 ```
 
 ```dart
