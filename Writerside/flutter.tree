@@ -29,6 +29,8 @@
             <toc-element topic="date.md"/>
             <toc-element topic="math.md"/>
             <toc-element topic="json.md"/>
+            <toc-element topic="file.md"/>
+            <toc-element topic="http.md"/>
         </toc-element>
         <toc-element topic="flow.md">
             <toc-element topic="loops.md"/>

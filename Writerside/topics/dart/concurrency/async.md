@@ -18,7 +18,7 @@ Future<String> fetchData() {
 
 <warning>考虑改用await替换Future API，使用await比使用 Future API 的代码更容易理解</warning>
 
-| 方法名                | 描述                                                         | 样例                                                         |
+| 函数名                | 描述                                                         | 样例                                                         |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Future()           | 创建一个 `Future` 对象，通常用于自定义异步操作               | `Future(() => 'Custom Future')`                              |
 | Future.value()     | 创建一个立即完成的 `Future`，并返回给定的值                  | `Future.value(42)`                                           |
