@@ -49,7 +49,12 @@ Future<String> _readFileAsync() async {
 }
 ```
 
+<warning>
 
+- 要定义异步函数，请在函数体前添加 async
+- await 关键字仅在 async 函数中起作用
+
+</warning>
 
 ## Stream
 
