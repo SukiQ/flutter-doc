@@ -58,6 +58,8 @@
         <toc-element topic="basic-flutter.md">
             <toc-element topic="widget.md"/>
             <toc-element topic="layout.md"/>
+            <toc-element topic="bar.md"/>
+            <toc-element topic="material.md"/>
         </toc-element>
     </toc-element>
 </instance-profile>
