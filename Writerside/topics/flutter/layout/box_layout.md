@@ -175,3 +175,24 @@ FittedBox(
 );
 ```
 
+
+
+## OverflowBox
+
+`OverflowBox`用于让子部件超出父容器的边界而不引发错误或布局问题
+
+```dart
+OverflowBox(
+  maxWidth: double.infinity,
+  maxHeight: double.infinity,
+  child: Align(
+    alignment: Alignment.topLeft,  // 左上角对齐
+    child: Container(
+      width: 300,
+      height: 300,
+      color: Colors.green,
+    ),
+  ),
+)
+```
+

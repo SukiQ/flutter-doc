@@ -61,9 +61,12 @@
             <toc-element topic="material.md"/>
         </toc-element>
         <toc-element topic="layout.md">
+            <toc-element topic="align.md"/>
             <toc-element topic="box_layout.md"/>
             <toc-element topic="line_layout.md"/>
             <toc-element topic="elastic_layout.md"/>
+            <toc-element topic="position_layout.md"/>
+            <toc-element topic="reactive_layout.md"/>
         </toc-element>
     </toc-element>
 </instance-profile>
