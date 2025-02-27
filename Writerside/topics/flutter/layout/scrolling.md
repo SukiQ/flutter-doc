@@ -12,6 +12,36 @@
 
 <warning>SingleChildScrollView不支持基于 Sliver 的延迟加载模型，所以如果预计视口可能包含超出屏幕尺寸太多的内容时，那么使用SingleChildScrollView将会非常昂贵</warning>
 
+| 属性                      | 说明                                                |
+| ------------------------- | --------------------------------------------------- |
+| `scrollDirection`         | 滚动方向                                            |
+| `reverse`                 | 是否反转                                            |
+| `padding`                 | 外边距                                              |
+| `primary`                 | 是否使用 widget 树中默认的`PrimaryScrollController` |
+| `physics`                 | 滚动类型                                            |
+| `controller`              | 控制组件                                            |
+| `dragStartBehavior`       | 确定处理拖动开始行为的方式                          |
+| `clipBehavior`            | 内容将被裁剪（或不裁剪）                            |
+| `restorationId`           | 保持滑动的偏移量                                    |
+| `keyboardDismissBehavior` | 键盘关闭行为                                        |
+
+```dart
+SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            padding: EdgeInsets.all(10),
+            child: Column(
+            children: List.generate(50, (index) {
+              return Container(
+                alignment: Alignment.center,
+                height: 80,
+                child: Text("$index"),
+                color: Colors.primaries[index % Colors.primaries.length],
+              );
+            }).toList(),
+          ),
+        )
+```
+
 
 
 ## 无限滚动
@@ -254,3 +284,101 @@ GridView.count(
           )
 ```
 
+
+
+## 自定义滚动
+
+
+
+### CustomScrollView
+
+`CustomScrollView` 允许你创建一个可滚动的视图，并且能够灵活地**组合**多种类型的滚动组件，如 `Sliver` 组件它适用于那些需要更高自定义滚动行为的场景
+
+| 属性                      | 说明                                                         |
+| ------------------------- | ------------------------------------------------------------ |
+| `scrollDirection`         | 滚动方向                                                     |
+| `reverse`                 | 是否反转                                                     |
+| `controller`              | 控制组件                                                     |
+| `primary`                 | 是否使用 widget 树中默认的`PrimaryScrollController`          |
+| `physics`                 | 滚动类型                                                     |
+| `scrollBehavior`          | 滚动行为                                                     |
+| `shrinkWrap`              | scrollDirection中滚动视图的范围是否应由正在查看的内容确定    |
+| `center`                  | 计算基准，默认为第一个元素                                   |
+| `anchor`                  | 排列位置的初始偏移量，0-1之间，0代表不便宜，1代表偏移一个视窗 |
+| `cacheExtent`             | 用于设置不可见的缓存区域的大小，合理的设置该值可以有效优化效率 |
+| `slivers`                 | 自定义Sliver                                                 |
+| `semanticChildCount`      | 设置子视窗的个数                                             |
+| `dragStartBehavior`       | 确定处理拖动开始行为的方式                                   |
+| `keyboardDismissBehavior` | 键盘关闭行为                                                 |
+| `restorationId`           | 保持滑动的偏移量                                             |
+| `clipBehavior`            | 内容将被裁剪（或不裁剪）                                     |
+
+```dart
+CustomScrollView(
+          slivers: [
+            // 这里是一个 SliverAppBar
+            SliverAppBar(
+              expandedHeight: 200.0,
+              floating: false,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text("CustomScrollView Example"),
+                background: Image.network(
+                  "https://example.com/image.jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            // 这里是一个 SliverList
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  return ListTile(title: Text('Item $index'));
+                },
+                childCount: 50,
+              ),
+            ),
+          ],
+        ),
+      )
+```
+
+
+
+### SliverAppBar
+
+`SliverAppBar` 允许实现可伸缩、可固定的 AppBar。通常，`SliverAppBar` 与 `CustomScrollView` 配合使用，使得在滚动时能够产生类似伸缩折叠效果的交互体验
+
+| 属性                        | 说明                                                         |
+| --------------------------- | ------------------------------------------------------------ |
+| `expandedHeight`            | 设置 `SliverAppBar` 展开时的最大高度                         |
+| `floating`                  | 是否允许 `SliverAppBar` 在滚动时浮动。`true` 表示快速浮动，`false` 表示不浮动 |
+| `pinned`                    | 是否将 `SliverAppBar` 固定在滚动视图的顶部。`true` 表示固定，`false` 表示不固定 |
+| `snap`                      | 当 `floating` 设置为 `true` 时，决定是否启用“快速滑动到顶部”的效果 |
+| `flexibleSpace`             | 一个可自定义的空间区域，通常用来展示背景图片、渐变等         |
+| `backgroundColor`           | 设置 `SliverAppBar` 的背景颜色                               |
+| `elevation`                 | 设置 `SliverAppBar` 的阴影高度                               |
+| `shape`                     | 设置 `SliverAppBar` 的形状，通常用于圆角或其他自定义形状     |
+| `automaticallyImplyLeading` | 设置 `SliverAppBar` 是否自动显示返回按钮                     |
+| `forceElevated`             | 是否强制将 `SliverAppBar` 设置为具有 `elevation`，即使在滚动视图内容较多时 |
+
+```dart
+SliverAppBar(
+  expandedHeight: 200.0,
+  floating: false,
+  pinned: true,
+  flexibleSpace: FlexibleSpaceBar(
+    title: Text("SliverAppBar Example"),
+    background: Image.network(
+      "https://example.com/your-image.jpg",
+      fit: BoxFit.cover,
+    ),
+  ),
+)
+```
+
+
+
+### SliverList \ SliverGrid
+
+和 `ListView`\ `GridView`类似
