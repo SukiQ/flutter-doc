@@ -1,5 +1,11 @@
 # 脚手架
 
+
+
+## Scaffold
+
+
+
 `Scaffold` 是一个用于创建应用基本结构的布局组件，它提供了一个框架，用于放置各种常见的 UI 组件
 
 | 属性                       | 描述                                                         |
@@ -121,6 +127,31 @@ endDrawer: Drawer(
 
 `AppBar` 是一个非常常用的顶部应用栏组件，通常用于展示应用的标题、图标、操作按钮等内容。它可以包含多个元素，如标题（`title`）、操作按钮（`actions`）、图标按钮（`leading`）、底部边框、背景颜色等等
 
+| 属性名                      | 说明                                                         |
+| --------------------------- | ------------------------------------------------------------ |
+| `leading`                   | 通常用于放置返回按钮或抽屉菜单按钮。如果为 `null`，则根据上下文自动生成 |
+| `title`                     | 标题部分，通常是一个 `Text` 组件                             |
+| `actions`                   | 右侧的操作按钮列表，通常是一些 `IconButton`                  |
+| `flexibleSpace`             | 放置在 `AppBar` 的底部，通常用于实现折叠效果                 |
+| `bottom`                    | 底部内容，通常是一个 `TabBar` 或 `SearchBar`                 |
+| `elevation`                 | 阴影的高度，控制 `AppBar` 的立体效果                         |
+| `shadowColor`               | 阴影的颜色                                                   |
+| `shape`                     | `AppBar` 的形状，例如圆角或自定义形状                        |
+| `backgroundColor`           | `AppBar` 的背景颜色                                          |
+| `foregroundColor`           | `AppBar` 的前景颜色（例如图标和文字的颜色）                  |
+| `iconTheme`                 | 图标的主题，控制图标的大小、颜色等                           |
+| `actionsIconTheme`          | 操作按钮的图标主题                                           |
+| `primary`                   | 是否将 `AppBar` 放在屏幕顶部（通常为 `true`）                |
+| `centerTitle`               | 是否将标题居中显示                                           |
+| `titleSpacing`              | 标题与左侧或右侧内容的间距                                   |
+| `toolbarHeight`             | `AppBar` 的高度                                              |
+| `toolbarOpacity`            | `AppBar` 工具栏的不透明度                                    |
+| `bottomOpacity`             | `AppBar` 底部内容的不透明度                                  |
+| `automaticallyImplyLeading` | 是否自动生成 `leading` 按钮（例如返回按钮）。默认为 `true`   |
+| `scrolledUnderElevation`    | 当内容滚动到 `AppBar` 下方时的阴影高度                       |
+| `surfaceTintColor`          | 用于调整 `AppBar` 表面色调的颜色                             |
+| `forceMaterialTransparency` | 是否强制使用透明材质效果                                     |
+
 ```dart
 AppBar(
   title: Text('My Transparent AppBar'),
@@ -128,19 +159,3 @@ AppBar(
   elevation: 0
 )
 ```
-
-| 属性                        | 说明                                                         |
-| --------------------------- | ------------------------------------------------------------ |
-| `title`                     | 设置 AppBar 的标题，通常是 `Text` widget                     |
-| `leading`                   | 可选，通常是一个菜单按钮或返回按钮                           |
-| `actions`                   | 可选，包含多个操作按钮的列表，通常是图标按钮                 |
-| `backgroundColor`           | 设置 AppBar 的背景颜色                                       |
-| `elevation`                 | 设置 AppBar 的阴影高度，默认值为 4.0                         |
-| `automaticallyImplyLeading` | 是否自动显示 `leading` 按钮，默认为 `true`                   |
-| `centerTitle`               | 设置标题是否居中，iOS 默认为 `true`，Android 默认为 `false`  |
-| `bottom`                    | 可选，设置 AppBar 的底部组件，通常用于添加 TabBar            |
-| `toolbarOpacity`            | 设置工具栏的透明度，范围从 0.0（完全透明）到 1.0（完全不透明） |
-| `flexibleSpace`             | 可选，允许你在 AppBar 上放置一个自定义的 widget（通常用于显示背景图像） |
-| `titleSpacing`              | 设置标题左右的间距                                           |
-| `primary`                   | 是否是主要的应用栏，影响返回按钮等行为。默认值为 `true`      |
-| `scrolledUnder`             | 是否在滑动时让 AppBar 隐藏，默认为 `false`                   |
