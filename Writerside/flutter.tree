@@ -71,11 +71,14 @@
         </toc-element>
         <toc-element topic="design.md">
             <toc-element topic="image.md"/>
+            <toc-element topic="themes.md"/>
+            <toc-element topic="text.md"/>
         </toc-element>
         <toc-element topic="adaptive.md">
             <toc-element topic="reactive.md"/>
             <toc-element topic="safearea.md"/>
             <toc-element topic="large_screens.md"/>
+            <toc-element topic="adaptive_practices.md"/>
         </toc-element>
     </toc-element>
 
