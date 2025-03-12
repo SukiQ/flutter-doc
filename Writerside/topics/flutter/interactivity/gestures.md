@@ -3,7 +3,6 @@
 
 
 
-
 ## GestureDetector
 
 `GestureDetector` 是一个通用的手势检测组件，可以监听多种手势事件。它可以包裹任何 widget，使其能够响应用户的交互
