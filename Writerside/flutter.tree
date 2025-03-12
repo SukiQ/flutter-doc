@@ -73,12 +73,18 @@
             <toc-element topic="image.md"/>
             <toc-element topic="themes.md"/>
             <toc-element topic="text.md"/>
+            <toc-element topic="shaders.md"/>
+            <toc-element topic="button.md"/>
+            <toc-element topic="icon.md"/>
         </toc-element>
         <toc-element topic="adaptive.md">
             <toc-element topic="reactive.md"/>
             <toc-element topic="safearea.md"/>
             <toc-element topic="large_screens.md"/>
             <toc-element topic="adaptive_practices.md"/>
+        </toc-element>
+        <toc-element topic="interactivity.md">
+            <toc-element topic="gestures.md"/>
         </toc-element>
     </toc-element>
 
