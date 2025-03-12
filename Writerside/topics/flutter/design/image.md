@@ -44,8 +44,6 @@ Image.file(File('path/to/your/image.png'))
 Image.memory(Uint8List data)
 ```
 
-### 
-
 | 属性              | 说明                                                         |
 | ----------------- | ------------------------------------------------------------ |
 | `width`           | 设置图片的宽度                                               |
