@@ -85,6 +85,7 @@
         </toc-element>
         <toc-element topic="interactivity.md">
             <toc-element topic="gestures.md"/>
+            <toc-element topic="draggable.md"/>
         </toc-element>
     </toc-element>
 
