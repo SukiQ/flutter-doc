@@ -44,3 +44,7 @@ GestureDetector(
   ),
 );
 ```
+
+
+
+## Dismissible
