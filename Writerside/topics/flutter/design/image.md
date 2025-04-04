@@ -11,6 +11,9 @@
 ```yaml
 flutter:
   assets:
+    # 加载目录
+    - assets/images/
+    # 加载对象
     - assets/images/my_image.png
 ```
 
