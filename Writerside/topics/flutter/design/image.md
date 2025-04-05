@@ -64,3 +64,53 @@ Image.memory(Uint8List data)
 | `gaplessPlayback` | 是否支持无间隙播放图像，适用于动画图像                       |
 | `cacheWidth`      | 设置图片缓存的宽度，通常用于优化性能                         |
 | `cacheHeight`     | 设置图片缓存的高度                                           |
+
+<note>Image 同样支持 gif 动画</note>
+
+## rootBundle
+
+`rootBundle` 是一个全局的 `AssetBundle` 对象，用于访问应用程序的主资源包（即打包在应用中的静态资源文件，如 JSON、文本、图片等）。它通常用于加载 `assets` 目录下的文件
+
+- 加载文本
+
+```dart
+import 'package:flutter/services.dart' show rootBundle;
+
+Future<String> loadAsset() async {
+  return await rootBundle.loadString('assets/config.json');
+}
+```
+
+- 加载图像
+
+```dart
+return const Image(image: AssetImage('assets/background.png'));
+```
+
+
+
+## 分辨率感知图像
+
+分辨率感知图像（Resolution-Aware Images）是指能够根据设备屏幕的像素密度自动选择最合适分辨率版本的图像资源。这种机制确保应用在不同 DPI 的设备上都能显示清晰锐利的图像，而不会出现模糊或像素化的问题
+
+**设备像素比**：
+
+- 1.0x：普通密度屏幕（如 160dpi）
+- 2.0x：高密度屏幕（如 iPhone 4s，320dpi）
+- 3.0x：超高密度屏幕（如 iPhone 6 Plus，480dpi）
+- 4.0x：超超高密度屏幕（如部分 Android 设备）
+
+**项目结构**：
+
+```
+assets/
+  images/
+    logo.png          # 1.0x 基准图像
+    2.0x/
+      logo.png       # 2.0x 高分辨率版本
+    3.0x/
+      logo.png       # 3.0x 超高分辨率版本
+    4.0x/
+      logo.png       # 4.0x 超超高分辨率版本
+```
+
