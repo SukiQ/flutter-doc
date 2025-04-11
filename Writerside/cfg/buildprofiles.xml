@@ -2,9 +2,6 @@
 <!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <!--    <footer>-->
-    <!--        <social type="email" href="weijun.wang@zznode.com">Call author</social>-->
-    <!--    </footer>-->
     <variables>
         <algolia-id>6LK5RYGJ3W</algolia-id>
         <algolia-index>flutter</algolia-index>

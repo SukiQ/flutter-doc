@@ -90,6 +90,9 @@
             <toc-element topic="validation.md"/>
             <toc-element topic="snackbars.md"/>
         </toc-element>
+        <toc-element topic="navigation.md">
+            <toc-element topic="routes.md"/>
+        </toc-element>
     </toc-element>
 
 </instance-profile>
