@@ -4,12 +4,22 @@
 
     <section-starting-page>
         <title>Flutter</title>
-        <description>Flutter documentation</description>
+        <description>语音</description>
         <spotlight>
             <a href="dart.md"
-               summary="Dart language" type="development"/>
+               summary="Dart语言文档" type="development"/>
             <a href="flutter.md"
-               summary="Flutter language" type="documents"/>
+               summary="Flutter语言文档" type="documents"/>
+            <a href="function.md"
+               summary="Flutter相关功能" type="branch"/>
         </spotlight>
+
+        <misc>
+            <cards>
+                <title>使用</title>
+                <a href="function.md"
+                   summary="Flutter相关功能" type="branch"/>
+            </cards>
+        </misc>
     </section-starting-page>
 </topic>

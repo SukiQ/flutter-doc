@@ -94,5 +94,8 @@
             <toc-element topic="routes.md"/>
         </toc-element>
     </toc-element>
+    <toc-element topic="function.md">
+        <toc-element topic="splash.md"/>
+    </toc-element>
 
 </instance-profile>
